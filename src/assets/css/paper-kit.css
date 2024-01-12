@@ -22,6 +22,9 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+
+
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -3029,6 +3032,7 @@ h3 .small {
 
 .description {
   color: #9a9a9a;
+  text-align: left;
 }
 
 blockquote small {
