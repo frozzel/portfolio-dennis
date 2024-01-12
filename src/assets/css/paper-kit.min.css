@@ -14,6 +14,7 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -2751,6 +2752,7 @@ h3 .small {
 }
 .description {
   color: #9a9a9a;
+  text-align: left;
 }
 blockquote small {
   font-style: normal;

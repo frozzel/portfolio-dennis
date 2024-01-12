@@ -20,6 +20,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import { FaSalesforce } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+
+
+
+
 
 // reactstrap components
 import {
@@ -75,10 +83,10 @@ function ExamplesNavbar() {
             data-placement="bottom"
             to="/index"
             target="_blank"
-            title="Coded by Creative Tim"
+            title="Dennis Hickox - Full Stack Web Developer"
             tag={Link}
           >
-            Paper Kit 2
+            Dennis Hickox
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -98,7 +106,7 @@ function ExamplesNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink to="/index" tag={Link}>
                 <i className="nc-icon nc-layout-11" /> Components
               </NavLink>
@@ -110,52 +118,62 @@ function ExamplesNavbar() {
               >
                 <i className="nc-icon nc-book-bookmark" /> Documentation
               </NavLink>
-            </NavItem>
-            <NavItem>
+            </NavItem> */}
+            <NavItem >
               <NavLink
                 data-placement="bottom"
-                href="https://twitter.com/CreativeTim?ref=creativetim"
+                href="https://www.salesforce.com/trailblazer/dhickox1"
                 target="_blank"
-                title="Follow us on Twitter"
+                title="Check out my Salesforce Trailblazer Profile"
+                className=" fa-new "
               >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
+                {/* <i className="fa fa-twitter" /> */}
+                <FaSalesforce className="fa  " />
+
+                <p className="d-lg-none">Salesforce</p>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                href="https://www.youtube.com/channel/UCeHPkw1Uk9QhMTu35Yf1FBQ/featured"
                 target="_blank"
-                title="Like us on Facebook"
+                title="Watch my YouTube Channel"
               >
-                <i className="fa fa-facebook-square" />
-                <p className="d-lg-none">Facebook</p>
+                {/* <i className="fa fa-facebook-square" /> */}
+                <FaYoutube className="fa"/>
+
+                <p className="d-lg-none">Youtube</p>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                href="https://www.linkedin.com/in/dennis-hickox-1b0a10227"
                 target="_blank"
-                title="Follow us on Instagram"
+                title="Follow us on LinkedIn"
               >
-                <i className="fa fa-instagram" />
+                {/* <i className="fa fa-instagram" /> */}
+                <FaLinkedin className="fa" />
+
                 <p className="d-lg-none">Instagram</p>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial?ref=creativetim"
+                href="https://github.com/frozzel"
                 target="_blank"
                 title="Star on GitHub"
               >
-                <i className="fa fa-github" />
+                {/* <i className="fa fa-github" /> */}
+                <FaGithub className="fa"/>
+
+
                 <p className="d-lg-none">GitHub</p>
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <Button
                 className="btn-round"
                 color="danger"
@@ -164,7 +182,7 @@ function ExamplesNavbar() {
               >
                 <i className="nc-icon nc-spaceship"></i> Upgrade to Pro
               </Button>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Container>
