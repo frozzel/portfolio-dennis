@@ -39,11 +39,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/index" element={<Index />} />
-      <Route path="/nucleo-icons" element={<NucleoIcons />} />
+      <Route path="/index" element={<Home />} />
+      {/* <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/landing-page" element={<LandingPage />} />
       <Route path="/profile-page" element={<ProfilePage />} />
-      <Route path="/register-page" element={<RegisterPage />} />
+      <Route path="/register-page" element={<RegisterPage />} /> */}
       <Route path="*" element={<Navigate to="/home" replace />} />
       <Route path="/home" element={<Home />} />
       <Route path="/" element={<Home />} />
