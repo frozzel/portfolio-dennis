@@ -16,13 +16,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react"; 
+import React, {useRef} from "react"; 
 import { FaHubspot } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import { FaSalesforce } from "react-icons/fa6";
 import { FaAws } from "react-icons/fa6";
 import ReactCardSlider from "views/slider/ReactCardSlider";
 import AI from "../../assets/img/AI.png";
+import emailjs from '@emailjs/browser'
+
+
 
 
 
@@ -35,7 +38,7 @@ import {
   // CardBody,
   // CardFooter,
   // CardTitle,
-  Form,
+  // Form,
   Input,
   InputGroupAddon,
   InputGroupText,
@@ -105,6 +108,22 @@ website:"https://tikkitt.herokuapp.com/",
 clickEvent:sliderClick
 },
   ]
+  const form = useRef()
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('service_3eenbrk', 'template_xlft98q', form.current, 'E0jgsTm4JA0E0F_0v')
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(true)
+        },
+        () => {
+          alert('Failed to send the message, please try again')
+        }
+      )
+  }
 
   return (
     <>
@@ -375,7 +394,7 @@ clickEvent:sliderClick
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="text-center">Keep in touch?</h2>
-                <Form className="contact-form">
+                <form className="contact-form" ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col md="6">
                       <label>Name</label>
@@ -385,7 +404,7 @@ clickEvent:sliderClick
                             <i className="nc-icon nc-single-02" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Name" type="text" />
+                        <Input placeholder="Name" type="text" name="name" required/>
                       </InputGroup>
                     </Col>
                     <Col md="6">
@@ -396,7 +415,31 @@ clickEvent:sliderClick
                             <i className="nc-icon nc-email-85" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
+                        <Input placeholder="Email" type="text" name="email" required/>
+                      </InputGroup>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md="6">
+                      <label>Phone</label>
+                      <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-mobile" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input placeholder="Phone" type="text" name="phone" />
+                      </InputGroup>
+                    </Col>
+                    <Col md="6">
+                      <label>Subject</label>
+                      <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-send" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input placeholder="Subject" type="text" name="subject" required/>
                       </InputGroup>
                     </Col>
                   </Row>
@@ -405,15 +448,16 @@ clickEvent:sliderClick
                     placeholder="Tell us your thoughts and feelings..."
                     type="textarea"
                     rows="4"
+                    name="message" required
                   />
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill" color="danger" size="lg">
+                      <Button className="btn-fill" color="info" size="lg" type="submit" value="SEND">
                         Send Message
                       </Button>
                     </Col>
                   </Row>
-                </Form>
+                </form>
               </Col>
             </Row>
           </Container>
