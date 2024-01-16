@@ -81,8 +81,8 @@ function ExamplesNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            to="/index"
-            target="_blank"
+            to="/home"
+            // target="_blank"
             title="Dennis Hickox - Full Stack Web Developer"
             tag={Link}
           >
@@ -156,7 +156,7 @@ function ExamplesNavbar() {
                 {/* <i className="fa fa-instagram" /> */}
                 <FaLinkedin className="fa" />
 
-                <p className="d-lg-none">Instagram</p>
+                <p className="d-lg-none">LinkedIn</p>
               </NavLink>
             </NavItem>
             <NavItem>

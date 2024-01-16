@@ -18,6 +18,10 @@
 */
 /*eslint-disable*/
 import React from "react";
+import { FaSalesforce } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
 
 // reactstrap components
 import { Row, Container } from "reactstrap";
@@ -31,26 +35,35 @@ function DemoFooter() {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=pkr-footer"
+                  href="https://www.salesforce.com/trailblazer/dhickox1"
                   target="_blank"
                 >
-                  Creative Tim
+                <FaSalesforce className="fa  " />
                 </a>
               </li>
               <li>
                 <a
-                  href="http://blog.creative-tim.com/?ref=pkr-footer"
+                  href="https://www.youtube.com/channel/UCeHPkw1Uk9QhMTu35Yf1FBQ/featured"
                   target="_blank"
                 >
-                  Blog
+                  <FaYoutube className="fa"/>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.creative-tim.com/license?ref=pkr-footer"
+                  href="https://www.linkedin.com/in/dennis-hickox-1b0a10227"
                   target="_blank"
                 >
-                  Licenses
+                  <FaLinkedin className="fa" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/frozzel"
+                  target="_blank"
+                >
+                 <FaGithub className="fa"/>
+
                 </a>
               </li>
             </ul>

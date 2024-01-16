@@ -5522,9 +5522,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   margin-top: 5px;
 }
 .card-profile .card-avatar {
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
+  height: 120px;
   margin: -60px auto 0;
+  object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
 }

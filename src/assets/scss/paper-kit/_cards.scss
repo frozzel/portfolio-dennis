@@ -45,6 +45,8 @@
         color: $dark-gray;
         margin-bottom: 5px;
         margin-top: 15px;
+        height: 175px;
+       
     }
 
     img{
@@ -100,6 +102,7 @@
 
             .card-title{
                 text-align: center;
+                
             }
         }
     }
@@ -261,6 +264,7 @@
     > .card-title{
        margin: 0;
        padding: 30px 0 0;
+
     }
 
     .card-body{
@@ -395,6 +399,7 @@
         .card-title{
             color: #FFF;
             margin-top: 10px;
+            
         }
         &:after{
             position: absolute;

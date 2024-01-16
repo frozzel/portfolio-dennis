@@ -199,3 +199,6 @@ Dribbble: <https://dribbble.com/creativetim>
 Instagram: <https://www.instagram.com/CreativeTimOfficial>
 
  <a href='https://pngtree.com/freebackground/technology-information-creates-world-digital-light-background-material_968485.html'>free background photos from pngtree.com/</a>
+
+
+https://github.com/JoeyAlpha5/react-card-slider-component/tree/main

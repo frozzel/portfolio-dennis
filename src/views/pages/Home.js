@@ -21,6 +21,10 @@ import { FaHubspot } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import { FaSalesforce } from "react-icons/fa6";
 import { FaAws } from "react-icons/fa6";
+import ReactCardSlider from "views/slider/ReactCardSlider";
+import AI from "../../assets/img/AI.png";
+
+
 
 
 
@@ -54,6 +58,54 @@ function Home() {
       document.body.classList.remove("profile-page");
     };
   });
+  const sliderClick = (slider)=>{
+    console.log("clicked slider")
+  }
+  const slides = [
+    {image:`${AI}`,
+    title:"Artificial Intelligence",
+    description:"Introducing my cutting-edge web development project that seamlessly integrates A-Frame.io, a powerful framework for building immersive virtual reality experiences, with the advanced capabilities of ChatGPT and the Web Speech API.",
+    github:"https://github.com/frozzel/meta-verse",
+    website:"https://sea-turtle-app-z2bd9.ondigitalocean.app/",
+    clickEvent:sliderClick
+    },
+    {image:"https://images.idgesg.net/images/article/2020/08/united_states_usa_currency_money_dollar_sign_circuitry_finance_budget_salary_salaries_funding_costs_expenses_profit_revenue_payment_by_andrey_tolkachev_gettyimages-1024976750_cso_nw_2400x1600-100854935-large.jpg?auto=webp&quality=85,70",
+    title:"Stripe Payments",
+    description:"This development incorporates a diverse range of integrations, including but not limited to: Stripe, Cloudinary, Emailjs, and Brevo (an email client and CRM solution).",
+    github:"https://github.com/frozzel/dollar4scholar-client",
+    website:"https://dollar4scholar.com/",
+    clickEvent:sliderClick
+  },
+  {image:"https://knowledge.wharton.upenn.edu/wp-content/uploads/2016/04/network-connections-900x387.jpg",
+  title:"Social Network Socket.io",
+  description:"This application uses an assortment of integrations including: Socket.io, Gem Turbo, Devise (User Auth), active storage with AWS S3, bootstrap, Saas, Postgresql and Drag & Drop Filepond. The app is deployed over Heroku with an AWS S3 bucket for picture sharing.",
+  github:"https://github.com/frozzel/narcissistSocial",
+  website:"https://narcissist-social.herokuapp.com/users/sign_in",
+  clickEvent:sliderClick
+  },
+  {image:"https://www.actian.com/wp-content/uploads/2019/05/DC13-B.jpg",
+  title:"Hubspot Integration",
+  description:"HubSpot API integrations enhance business processes by connecting the CRM platform with other tools. For instance, syncing HubSpot with email marketing software automates lead information, enabling seamless communication. Integrating with sales tools provides real-time updates on leads and deals, streamlining sales strategies.",
+  github:"https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum",
+  website:"https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum",
+  clickEvent:sliderClick
+},
+{image:"https://talkcmo.com/wp-content/uploads/2020/11/Digital-Transformation-%E2%80%93-The-Post-Pandemic-Era-of-E-Commerce.jpg",
+title:"E-Commerce Store",
+description:"A MERN e-commerce app enables online buying and selling. It uses MongoDB for data, Express.js for server logic, React for the front end, and Node.js as the runtime. Users can browse products, add to the cart, and checkout, with features like authentication and secure payments for a smooth shopping experience.",
+github:"https://github.com/frozzel/LUX",
+website:"https://indulge.herokuapp.com/",
+clickEvent:sliderClick
+},
+{image:"https://assets.nst.com.my/images/articles/oridigits_1649347214.jpg",
+title:"Productivity App",
+description:"This productivity app facilitates seamless team collaboration with a user-friendly interface. It includes a drag-and-drop to-do list feature for easy task management. Team members can collaborate efficiently, share updates, and organize tasks effortlessly, enhancing overall productivity and coordination.",
+github:"https://github.com/frozzel/Tikkitt",
+website:"https://tikkitt.herokuapp.com/",
+clickEvent:sliderClick
+},
+  ]
+
   return (
     <>
       <ExamplesNavbar />
@@ -89,7 +141,7 @@ function Home() {
                   <div className="description">
                     <h4 className="info-title">Web Developer</h4>
                     <p className="description">Proudly certified in web development from Georgia Institute of Technology</p>
-                    <Button className="btn-link" color="info" href="#pablo">
+                    <Button className="btn-link" color="info" target="_blank" href="https://drive.google.com/file/d/14iEdCLl1n18f0Ru25xx2yaR0aq9a3HxS/view?usp=sharing">
                       See more
                     </Button>
                   </div>
@@ -106,7 +158,7 @@ function Home() {
                     <p>
                       Certified in Hubspot Marketing Software, Integration &  development 
                     </p>
-                    <Button className="btn-link" color="info" href="#pablo">
+                    <Button className="btn-link" color="info" target="_blank" href="https://drive.google.com/file/d/1TYNF-TsY2kuCNaPSMo7KSpFWSvXn10EF/view?usp=sharing">
                       See more
                     </Button>
                   </div>
@@ -142,7 +194,7 @@ function Home() {
                     <p>
                       Trained to use AWS for cloud computing, storage, EC2, S3, RDS, and Digital Ocean
                     </p>
-                    <Button className="btn-link" color="info" href="#pablo">
+                    <Button className="btn-link" color="info" target="_blank" href="https://drive.google.com/file/d/16C4W1JKZaQ8BjkpKEfPHg7OHhT0XdXzy/view?usp=sharing">
                       See more
                     </Button>
                   </div>
@@ -153,8 +205,8 @@ function Home() {
         </div>
         <div className="section section-dark text-center">
           <Container>
-            <h2 className="title">Let's talk about us</h2>
-            <Row>
+            <h2 className="title">Work Portfolio</h2>
+            {/* <Row>
               <Col md="4">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
@@ -310,7 +362,9 @@ function Home() {
                   </CardFooter>
                 </Card>
               </Col>
-            </Row>
+            </Row> */}
+                    <ReactCardSlider slides={slides}/>
+
           </Container>
         </div>
         <div className="section landing-section">
