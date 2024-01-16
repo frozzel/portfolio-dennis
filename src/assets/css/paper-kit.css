@@ -23,7 +23,9 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
-
+.fa-new{
+    font-size: 20px;
+}
 
 .bootstrap-switch {
   display: inline-block;

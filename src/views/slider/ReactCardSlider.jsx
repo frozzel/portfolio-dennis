@@ -2,6 +2,8 @@ import React from 'react';
 import './Slider.css';
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa6";
+import { MdChevronLeft } from "react-icons/md";
+import { MdChevronRight } from "react-icons/md";
 
 
 
@@ -18,17 +20,17 @@ import {
 const ReactCardSlider = (props) => {
   const slideLeft = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft += 500;
+    slider.scrollLeft = slider.scrollLeft - 1000;
   }
 
   const slideRight = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft -= 500;
+    slider.scrollLeft = slider.scrollLeft + 1000;
   }
 
   return (
-    <div id="main-slider-container">
-      {/* <MdChevronLeft size={40} className="slider-icon left" onClick={slideLeft} /> */}
+    <div id="main-slider-container" >
+      <MdChevronLeft size={40} className="slider-icon left" onClick={slideLeft} />
       <div id="slider">
         {
           props.slides.map((slide, index) => {
@@ -36,7 +38,7 @@ const ReactCardSlider = (props) => {
               <Col md="4" key={index} onClick={() => slide.clickEvent()}>
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
-                    <a href={slide.website}  target='_blank' >
+                    <a href={slide.website}  target='_blank'  rel="noreferrer" >
                       {/* <img
                         alt="..."
                         src={slide.image}
@@ -87,7 +89,7 @@ const ReactCardSlider = (props) => {
           })
         }
       </div>
-      {/* <MdChevronRight size={40} className="slider-icon right" onClick={slideRight} /> */}
+      <MdChevronRight size={40} className="slider-icon right" onClick={slideRight} />
     </div>
   )
 }

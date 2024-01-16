@@ -38,7 +38,7 @@ import {
   NavLink,
   Nav,
   Container,
-  Button,
+  // Button,
 } from "reactstrap";
 
 function ExamplesNavbar() {
@@ -128,7 +128,7 @@ function ExamplesNavbar() {
                 className=" fa-new "
               >
                 {/* <i className="fa fa-twitter" /> */}
-                <FaSalesforce className="fa  " />
+                <FaSalesforce className="fa fa-new " />
 
                 <p className="d-lg-none">Salesforce</p>
               </NavLink>
@@ -141,7 +141,7 @@ function ExamplesNavbar() {
                 title="Watch my YouTube Channel"
               >
                 {/* <i className="fa fa-facebook-square" /> */}
-                <FaYoutube className="fa"/>
+                <FaYoutube className="fa fa-new"/>
 
                 <p className="d-lg-none">Youtube</p>
               </NavLink>
@@ -154,7 +154,7 @@ function ExamplesNavbar() {
                 title="Follow us on LinkedIn"
               >
                 {/* <i className="fa fa-instagram" /> */}
-                <FaLinkedin className="fa" />
+                <FaLinkedin className="fa fa-new" />
 
                 <p className="d-lg-none">LinkedIn</p>
               </NavLink>
@@ -167,7 +167,7 @@ function ExamplesNavbar() {
                 title="Star on GitHub"
               >
                 {/* <i className="fa fa-github" /> */}
-                <FaGithub className="fa"/>
+                <FaGithub className="fa fa-new"/>
 
 
                 <p className="d-lg-none">GitHub</p>

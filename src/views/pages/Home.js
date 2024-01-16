@@ -31,10 +31,10 @@ import AI from "../../assets/img/AI.png";
 // reactstrap components
 import {
   Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
+  // Card,
+  // CardBody,
+  // CardFooter,
+  // CardTitle,
   Form,
   Input,
   InputGroupAddon,
@@ -121,8 +121,8 @@ clickEvent:sliderClick
                 <Button
                   className="btn-round"
                   color="info"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
+                  href="https://drive.google.com/file/d/1YyrChx5cNsEU2BaJ-8cKI-3unEiTck9o/view?usp=sharing"
+                  target="_blank"
                 >
                   Resume
                 </Button>
@@ -203,7 +203,10 @@ clickEvent:sliderClick
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center">
+        <div className="section section-dark text-center"  
+        style={{
+          backgroundImage:"url(" + require("assets/img/bg.jpg") + ")", backgroundPosition: "bottom"}}
+        >
           <Container>
             <h2 className="title">Work Portfolio</h2>
             {/* <Row>

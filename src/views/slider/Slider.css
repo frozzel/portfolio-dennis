@@ -4,6 +4,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    margin: 0 auto;
 }
 
 #slider{
@@ -54,7 +55,7 @@
 .slider-icon.left, .slider-icon.right {
     background: white;
     border-radius: 100%;
-    position: absolute;
+    position: relative;
     opacity: 0.5;
     box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%);
     cursor: pointer;
