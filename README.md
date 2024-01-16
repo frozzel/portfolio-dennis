@@ -2,7 +2,7 @@
 
   ## Screen Shots
 
-![Screen Shots](https://github.com/frozzel/meta-verse/blob/7967a53566d4110dbe22bd0c91a825b164a42f31/src/assets/images/Screenshot%20Meta-1.png)
+![Screen Shots](https://github.com/frozzel/portfolio-dennis/blob/bf2d3ecb395f40be3aa9b3f15e1484d84464fd20/src/assets/img/ScreenShot-1.png)
 
 # [Paper Kit React - Free Bootstrap 4, React, React Hooks and Reactstrap UI Kit](https://demos.creative-tim.com/paper-kit-react/#/index?ref=pkr-github-readme) ![version](https://img.shields.io/badge/version-1.3.2-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/paper-kit-react.svg?maxAge=2592000)](https://github.com/creativetimofficial/paper-kit-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/paper-kit-react.svg?maxAge=2592000)](https://github.com/creativetimofficial/paper-kit-react/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
