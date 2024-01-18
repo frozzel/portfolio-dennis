@@ -177,7 +177,7 @@ clickEvent:sliderClick
                     <p>
                       Certified in Hubspot Marketing Software, Integration &  development 
                     </p>
-                    <Button className="btn-link" color="info" target="_blank" href="https://drive.google.com/file/d/1TYNF-TsY2kuCNaPSMo7KSpFWSvXn10EF/view?usp=sharing">
+                    <Button className="btn-link" color="info" target="_blank" href="https://drive.google.com/file/d/1CP9By-ne-0wNJV5oPaMWgpZTmYzfDXlg/view?usp=sharing">
                       See more
                     </Button>
                   </div>
