@@ -28,17 +28,17 @@ import { Row, Container } from "reactstrap";
 
 function DemoFooter() {
   return (
-    <footer className="footer footer-black footer-white">
-      <Container>
-        <Row>
-          <nav className="footer-nav">
-            <ul>
-              <li>
+    <footer className="footer footer-white footer-black  bg-info ">
+      <Container  >
+        <Row >
+          <nav className="footer-nav ">
+            <ul >
+              <li >
                 <a
                   href="https://www.salesforce.com/trailblazer/dhickox1"
                   target="_blank"
                 >
-                <FaSalesforce className="fa  " />
+                <FaSalesforce className="fa  text-white " />
                 </a>
               </li>
               <li>
@@ -46,7 +46,7 @@ function DemoFooter() {
                   href="https://www.youtube.com/channel/UCeHPkw1Uk9QhMTu35Yf1FBQ/featured"
                   target="_blank"
                 >
-                  <FaYoutube className="fa"/>
+                  <FaYoutube className="fa text-white"/>
                 </a>
               </li>
               <li>
@@ -54,7 +54,7 @@ function DemoFooter() {
                   href="https://www.linkedin.com/in/dennis-hickox-1b0a10227"
                   target="_blank"
                 >
-                  <FaLinkedin className="fa" />
+                  <FaLinkedin className="fa text-white" />
                 </a>
               </li>
               <li>
@@ -62,14 +62,14 @@ function DemoFooter() {
                   href="https://github.com/frozzel"
                   target="_blank"
                 >
-                 <FaGithub className="fa"/>
+                 <FaGithub className="fa text-white"/>
 
                 </a>
               </li>
             </ul>
           </nav>
           <div className="credits ml-auto">
-            <span className="copyright">
+            <span className="copyright text-white">
               © {new Date().getFullYear()}, made with{" "}
               <i className="fa fa-heart heart" /> by Dennis Hickox
             </span>
