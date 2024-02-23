@@ -71,7 +71,7 @@ export default function Google() {
                   <div className="description">
                     <h4 className="info-title font-weight-normal">AI-Powered Performance Ads</h4>
                     <p className='description font-weight-normal'>
-                    allows developers to leverage machine learning algorithms for targeted advertising, maximizing the effectiveness of ad campaigns. 
+                    Allows developers to leverage machine learning algorithms for targeted advertising, maximizing the effectiveness of ad campaigns. 
                     </p>
                     {/* <Button className="btn-link" target="_blank" color="info" href="https://www.salesforce.com/trailblazer/dhickox1">
                       See more
