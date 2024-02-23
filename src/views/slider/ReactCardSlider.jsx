@@ -4,6 +4,18 @@ import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa6";
 import { MdChevronLeft } from "react-icons/md";
 import { MdChevronRight } from "react-icons/md";
+import { FaMoneyCheckDollar } from "react-icons/fa6";
+import { FaUserFriends } from "react-icons/fa";
+import { FaHubspot } from "react-icons/fa6";
+import { FaShoppingCart } from "react-icons/fa";
+import { SlOrganization } from "react-icons/sl";
+import { FaRobot } from "react-icons/fa6";
+
+
+
+
+
+
 
 
 
@@ -43,7 +55,22 @@ const ReactCardSlider = (props) => {
                         alt="..."
                         src={slide.image}
                       /> */}
-                      <div className="slider-card-image" style={{backgroundImage:`url(${slide.image})`,backgroundSize:'cover'}}></div>
+                      {/* <div className="slider-card-image" style={{backgroundImage:`url(${slide.image})`,backgroundSize:'cover'}}></div> */}
+                      {slide.image === "GiBrain"
+                      ? <FaRobot  className="btn-avi "/>
+                      : slide.image === "FaCcMastercard"
+                      ? <FaMoneyCheckDollar  className="btn-avi"/>
+                      : slide.image === "RiInstagramFill"
+                      ? <FaUserFriends  className="btn-avi"/>
+                      : slide.image === "FaHubspot"
+                      ? <FaHubspot  className="btn-avi"/>
+                      : slide.image === "FaShoppingCart"
+                      ? <FaShoppingCart  className="btn-avi"/>
+                      : slide.image === "SlOrganization"
+                      ? <SlOrganization  className="btn-avi"/>
+                      : <MdChevronLeft  className="btn-avi"/>
+                      
+                    }
                     </a>
                   </div>
                   <CardBody>
@@ -53,7 +80,7 @@ const ReactCardSlider = (props) => {
                         {/* <h6 className="card-category">{slide.category}</h6> */}
                       </div>
                     </a>
-                    <p className="card-description text-justify text-wrap">
+                    <p className="card-description text-center text-wrap cd1">
                       {slide.description}
                     </p>
                   </CardBody>
