@@ -49,7 +49,7 @@ const ReactCardSlider = (props) => {
             return (
               <Col md="4" key={index} onClick={() => slide.clickEvent()}>
                 <Card className="card-profile card-plain">
-                  <div className="card-avatar">
+                  <div className="card-avatar ">
                     <a href={slide.website}  target='_blank'  rel="noreferrer" >
                       {/* <img
                         alt="..."
@@ -75,7 +75,7 @@ const ReactCardSlider = (props) => {
                   </div>
                   <CardBody>
                     <a href={slide.website} >
-                      <div className="author">
+                      <div className="author ">
                         <CardTitle tag="h4">{slide.title}</CardTitle>
                         {/* <h6 className="card-category">{slide.category}</h6> */}
                       </div>
@@ -118,6 +118,24 @@ const ReactCardSlider = (props) => {
       </div>
       <MdChevronRight size={40} className="slider-icon right" onClick={slideRight} />
     </div>
+
+//     <div id="main-slider-container">
+//     <MdChevronLeft size={40} className="slider-icon left" onClick={slideLeft}/>
+//     <div id="slider">
+//        { 
+//         props.slides.map((slide,index)=>{
+//                 return(
+//                     <div className="slider-card" key={index} onClick={()=>slide.clickEvent()}>
+//                         <div className="slider-card-image" style={{backgroundImage:`url(${slide.image})`,backgroundSize:'cover'}}></div>
+//                         <p className="slider-card-title">{slide.title}</p>
+//                         <p className="slider-card-description">{slide.description}</p>
+//                     </div>
+//                 )
+//             })
+//         }
+//     </div>
+//     <MdChevronRight size={40} className="slider-icon right" onClick={slideRight}/>
+// </div>
   )
 }
 export default ReactCardSlider;

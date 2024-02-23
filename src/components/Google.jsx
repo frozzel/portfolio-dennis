@@ -36,7 +36,7 @@ export default function Google() {
                   </div>
                   <div className="description">
                     <h4 className="info-title font-weight-normal">Google Ads</h4>
-                    <p className="description font-weight-normal"> a powerful advertising platform widely used for online marketing, and a web developer with knowledge of its intricacies can optimize website structures to enhance ad performance.</p>
+                    <p className="description font-weight-normal"> A powerful advertising platform widely used for online marketing, and a web developer with knowledge of its intricacies can optimize website structures to enhance ad performance.</p>
                     {/* <Button className="btn-link" color="info" target="_blank" href="https://drive.google.com/file/d/14iEdCLl1n18f0Ru25xx2yaR0aq9a3HxS/view?usp=sharing">
                       See more
                     </Button> */}
