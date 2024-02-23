@@ -14,7 +14,7 @@ import { FaGithub } from "react-icons/fa6";
 
 export default function CardSlider() {
   return (
-    <div className="section text-center section-dark bg-transparent d-flex align-items-center justify-content-center ">
+    <div className="section text-center section-dark bg-transparent d-flex align-items-center justify-content-center p-0">
           <Container >
             <Row>
               <Col className="ml-auto mr-auto " md="8">
