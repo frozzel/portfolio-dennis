@@ -87,4 +87,10 @@
 .btn-new{
     font-size: 1.2rem;
 }
-  
+
+.btn-avi{
+    font-size: 5rem;
+    color: #fffcf5;
+    position: center;
+    margin: 12px;
+} 
