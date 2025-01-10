@@ -17,7 +17,7 @@ export default function Google() {
                 <Button
                   className="btn-round"
                   color="neutral"
-                  href="https://skillshop.exceedlms.com/profiles/a8fa8522096840549f2aa0beac72bc60"
+                  href="https://skillshop.credential.net/profile/dennishickox/wallet"
                   target="_blank"
                 >
                   Certifications
