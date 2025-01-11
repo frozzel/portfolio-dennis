@@ -24,7 +24,8 @@ import { FaAws } from "react-icons/fa6";
 import emailjs from '@emailjs/browser'
 import Google from "components/Google";
 // import WorkPortfolio from "views/slider/CardSlider";
-import ReactCardSlider from "views/slider/ReactCardSlider";
+// import ReactCardSlider from "views/slider/CardSlider";
+import ReactSlick from "views/slider/ReactSlick";
 
 
 // reactstrap components
@@ -75,53 +76,53 @@ function Home() {
         }
       )
   }
-  const sliderClick = (slider)=>{
-    console.log("clicked slider")
-  }
-  const slides = [
-    {image: "GiBrain",
-    title:"Artificial Intelligence",
-    description:"Introducing my cutting-edge web development project that seamlessly integrates A-Frame.io, a powerful framework for building immersive virtual reality experiences, with the advanced capabilities of ChatGPT and the Web Speech API.",
-    github:"https://github.com/frozzel/meta-verse",
-    website:"https://sea-turtle-app-z2bd9.ondigitalocean.app/",
-    clickEvent:sliderClick
-    },
-    {image:"FaCcMastercard",
-    title:"Stripe Payments",
-    description:"This development incorporates a diverse range of integrations, including but not limited to: Stripe, Cloudinary, Emailjs, and Brevo (an email client and CRM solution). UpWork Client site with a focus on user experience and user interface design.",
-    github:"https://github.com/frozzel/dollar4scholar-client",
-    website:"https://dollar4scholar.com/",
-    clickEvent:sliderClick
-  },
-  {image:"RiInstagramFill",
-  title:"Social Network Socket.io",
-  description:"This application uses an assortment of integrations including: Socket.io, Gem Turbo, Devise (User Auth), active storage with AWS S3, bootstrap, Saas, Postgresql and Drag & Drop Filepond. The app is deployed over Heroku with an AWS S3 bucket for picture sharing.",
-  github:"https://github.com/frozzel/narcissistSocial",
-  website:"https://narcissist-social.herokuapp.com/users/sign_in",
-  clickEvent:sliderClick
-  },
-  {image:"FaHubspot",
-  title:"Hubspot Integration",
-  description:"HubSpot API integrations enhance business processes by connecting the CRM platform with other tools. For instance, syncing HubSpot with email marketing software automates lead information, enabling seamless communication. Integrating with sales tools provides real-time updates on leads and deals, streamlining sales strategies.",
-  github:"https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum",
-  website:"https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum",
-  clickEvent:sliderClick
-},
-{image:"FaShoppingCart",
-title:"E-Commerce Store",
-description:"A MERN e-commerce app enables online buying and selling. It uses MongoDB for data, Express.js for server logic, React for the front end, and Node.js as the runtime. Users can browse products, add to the cart, and checkout, with features like authentication and secure payments for a smooth shopping experience.",
-github:"https://github.com/frozzel/LUX",
-website:"https://indulge.herokuapp.com/",
-clickEvent:sliderClick
-},
-{image:"SlOrganization",
-title:"Productivity App",
-description:"This productivity app facilitates seamless team collaboration with a user-friendly interface. It includes a drag-and-drop to-do list feature for easy task management. Team members can collaborate efficiently, share updates, and organize tasks effortlessly, enhancing overall productivity and coordination.",
-github:"https://github.com/frozzel/Tikkitt",
-website:"https://tikkitt.herokuapp.com/",
-clickEvent:sliderClick
-},
-  ]
+  // const sliderClick = (slider)=>{
+  //   console.log("clicked slider")
+  // }
+//   const slides = [
+//     {image: "GiBrain",
+//     title:"Artificial Intelligence",
+//     description:"Introducing my cutting-edge web development project that seamlessly integrates A-Frame.io, a powerful framework for building immersive virtual reality experiences, with the advanced capabilities of ChatGPT and the Web Speech API.",
+//     github:"https://github.com/frozzel/meta-verse",
+//     website:"https://sea-turtle-app-z2bd9.ondigitalocean.app/",
+//     clickEvent:sliderClick
+//     },
+//     {image:"FaCcMastercard",
+//     title:"Stripe Payments",
+//     description:"This development incorporates a diverse range of integrations, including but not limited to: Stripe, Cloudinary, Emailjs, and Brevo (an email client and CRM solution). UpWork Client site with a focus on user experience and user interface design.",
+//     github:"https://github.com/frozzel/dollar4scholar-client",
+//     website:"https://dollar4scholar.com/",
+//     clickEvent:sliderClick
+//   },
+//   {image:"RiInstagramFill",
+//   title:"Social Network Socket.io",
+//   description:"This application uses an assortment of integrations including: Socket.io, Gem Turbo, Devise (User Auth), active storage with AWS S3, bootstrap, Saas, Postgresql and Drag & Drop Filepond. The app is deployed over Heroku with an AWS S3 bucket for picture sharing.",
+//   github:"https://github.com/frozzel/narcissistSocial",
+//   website:"https://narcissist-social.herokuapp.com/users/sign_in",
+//   clickEvent:sliderClick
+//   },
+//   {image:"FaHubspot",
+//   title:"Hubspot Integration",
+//   description:"HubSpot API integrations enhance business processes by connecting the CRM platform with other tools. For instance, syncing HubSpot with email marketing software automates lead information, enabling seamless communication. Integrating with sales tools provides real-time updates on leads and deals, streamlining sales strategies.",
+//   github:"https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum",
+//   website:"https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum",
+//   clickEvent:sliderClick
+// },
+// {image:"FaShoppingCart",
+// title:"E-Commerce Store",
+// description:"A MERN e-commerce app enables online buying and selling. It uses MongoDB for data, Express.js for server logic, React for the front end, and Node.js as the runtime. Users can browse products, add to the cart, and checkout, with features like authentication and secure payments for a smooth shopping experience.",
+// github:"https://github.com/frozzel/LUX",
+// website:"https://indulge.herokuapp.com/",
+// clickEvent:sliderClick
+// },
+// {image:"SlOrganization",
+// title:"Productivity App",
+// description:"This productivity app facilitates seamless team collaboration with a user-friendly interface. It includes a drag-and-drop to-do list feature for easy task management. Team members can collaborate efficiently, share updates, and organize tasks effortlessly, enhancing overall productivity and coordination.",
+// github:"https://github.com/frozzel/Tikkitt",
+// website:"https://tikkitt.herokuapp.com/",
+// clickEvent:sliderClick
+// },
+//   ]
 
   return (
     <>
@@ -227,8 +228,9 @@ clickEvent:sliderClick
         >
           <Container>
             <h2 className="title">Work Portfolio</h2>
-           
-                    <ReactCardSlider slides={slides}/>
+
+            <ReactSlick />
+                    {/* <ReactCardSlider slides={slides}/> */}
                     {/* <WorkPortfolio /> */}
 
           </Container>
