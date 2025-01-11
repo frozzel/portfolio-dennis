@@ -17,7 +17,7 @@ export default function Google() {
                 <Button
                   className="btn-round"
                   color="neutral"
-                  href="https://skillshop.credential.net/profile/dennishickox/wallet"
+                  href="https://drive.google.com/file/d/1PW6IOubCGghuNoB-nUXobNl1ErvxVR7m/view?usp=drive_link"
                   target="_blank"
                 >
                   Certifications

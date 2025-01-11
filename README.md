@@ -65,5 +65,7 @@ What Sets Me Apart:
 
   [![Github license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+---
+
   >[!NOTE]
   >Run `npm run build` then push to Digital Ocean pre built 
