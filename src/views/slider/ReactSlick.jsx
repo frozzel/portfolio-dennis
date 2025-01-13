@@ -37,7 +37,7 @@ const slides = [
         github: "https://github.com/frozzel/meta-verse"
     },
     {
-        title: "Three.js Examples: 3D Models and Animations",
+        title: "Three.js 3D Models and Animations",
         description: "This project presents an array of 3D animations 🚀 and interactive features rendered directly in the browser using WebGL, without the need for any additional plugins. 👽 Explore the creative possibilities with interactive 3D graphics, including spinning cubes, orbiting spheres, and more, all while navigating the interface with intuitive mouse controls. 🛸 This application offers a comprehensive introduction to setting up and utilizing Three.js in a React environment.",
         image: THREE,
         github: "https://github.com/frozzel/THREE-REACT"
