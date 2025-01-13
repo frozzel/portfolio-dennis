@@ -10,6 +10,12 @@ import THREE from "../../assets/img/sites/ReactThreeGif.gif";
 import ReactNative from "../../assets/img/sites/ReactNativeDemo.png";
 import CGIpro from "../../assets/img/sites/CGIPRO.png";
 import Dollar4Scholar from "../../assets/img/sites/DollarScreen.png";
+import WheelHouse from "../../assets/img/sites/WheelhouseStudios.png";
+import Narcissist from "../../assets/img/sites/NarcissistSocial.png";
+import Indulge from "../../assets/img/sites/Ingulge.gif";
+import Tikkitt from "../../assets/img/sites/Tikkitt.png";
+import ChatGpt from "../../assets/img/sites/chatgptbanner.webp";
+import AuthNet from "../../assets/img/sites/authorize-net.jpg";
 
 const slides = [
     {
@@ -53,6 +59,42 @@ const slides = [
         description: "This Lottery is open for College and University student Country wide. With access to an edu administered email address you are qualified to win the weekly pot. The pot submissions will be sorted through and pulled weekly for a winner. Keep an eye out for your emails! You may have the luck of the draw. The Development utilizes a multitude of integrations including: Stripe, Cloudinary, Emailjs, Brevo (email client & CRM).",
         image: Dollar4Scholar,
         github: "https://github.com/frozzel/dollar4scholar-client"
+    },    
+    {
+        title: "Wheel House Studios",
+        description: "Welcome to the GitHub repository for Wheel House Studios, a premier wedding photography service dedicated to capturing your special moments with elegance and creativity. Our goal is to provide timeless, beautiful images that tell the story of your love and celebration. Wheel House Studios specializes in wedding photography, offering a range of services designed to fit your unique vision. This Development is based on a Create A React App with a HoneyBook form integration for the client.",
+        image: WheelHouse,
+        github: "https://github.com/frozzel/wheelhousestudios"
+    },   
+    {
+        title: "Narcissist Social Media",
+        description: "Ruby on Rails social media mock application of Instagram. This application uses an assortment of integrations including: Gem Turbo, Devise (User Auth), active storage with AWS S3, bootstrap, Saas, Postgresql and Drag & Drop Filepond. The app is deployed over Heroku with an AWS S3 bucket for picture sharing. It has photo post sharing, likes and comments along with following capabilities.",
+        image: Narcissist,
+        github: "https://github.com/frozzel/narcissistSocial"
+    },    
+    {
+        title: "INDULGE E-commerce App",
+        description: "Mock E-commerce site that utilizes global state and react hooks. The site is integrated with stripe payments. Full stack application with mongoDb/mongoose integrations & Apollo/graphql server side. React/Apollo integration front side utilizing global state and stripe integration along with animate.css and SASS.",
+        image: Indulge,
+        github: "https://github.com/frozzel/LUX"
+    },
+    {
+        title: "Tikkitt ",
+        description: "Tikkitt is an American cloud-based software company headquartered in Atlanta, GA. It provides customer relationship management (CRM) service and also provides enterprise applications focused on customer service, marketing automation, analytics, and application development.",
+        image: Tikkitt,
+        github: "https://github.com/frozzel/Tikkitt"
+    },
+    {
+        title: "Node.js Server for Training LLMs",
+        description: "Welcome to the Node.js server repository for testing and training Large Language Models (LLMs) utilizing OpenAI's ChatGPT API. This server acts as a flexible platform to interact with and extend language model functionalities through various testing and training protocols.",
+        image: ChatGpt,
+        github: "https://github.com/frozzel/LLM-Training-Server"
+    }, 
+    {
+        title: "Authorize.Net Application",
+        description: "Welcome to the MERN Stack Authorize.Net Application! This application serves as an example of how to integrate the Authorize.Net payment gateway into a MERN (MongoDB, Express.js, React, Node.js) stack.",
+        image: AuthNet,
+        github: "https://github.com/frozzel/auth.net-server"
     }
 ];
 
@@ -62,12 +104,23 @@ export default function ReactSlick() {
         className: "slick-slider",
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 3, // Default number of slides
         slidesToScroll: 1,
-        adaptiveHeight: true, 
+        adaptiveHeight: true,
         autoplay: true,
-
+        responsive: [
+            {
+                breakpoint: 768, // Screen width <= 768px (mobile devices)
+                settings: {
+                    slidesToShow: 1, // Show 1 slide on mobile
+                    slidesToScroll: 1, // Scroll 1 slide at a time
+                    infinite: true,
+                    dots: true,
+                },
+            },
+        ],
     };
+    
     
     return (
         <div className="slider-container">
@@ -79,10 +132,10 @@ export default function ReactSlick() {
           </div> */}
             {slides.map((slide, index) => {
                 return (
-                <div key={index}>
+                <div key={index} className="slider-card2">
                     <a href={slide.github} target='_blank' rel="noreferrer">
                     <h6 className="slider-card-title">{slide.title}</h6>
-                    <img src={slide.image} alt="placeholder" />
+                    <img src={slide.image} alt="placeholder" className="img-card" />
                     <div className="slider-card-description">{slide.description}</div>
                     {slide.description2 ? <div className="slider-card-description">{slide.description2}</div> : null}
                     </a>
