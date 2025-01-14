@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import Arwin from "../../assets/img/sites/Arwin.png";
 import UniServer from "../../assets/img/sites/UniServer.gif";
@@ -107,11 +107,43 @@ const slides = [
 
 
 export default function ReactSlick() {
+    const [nav1, setNav1] = useState(null);
+    const [nav2, setNav2] = useState(null);
+    let sliderRef1 = useRef(null);
+    let sliderRef2 = useRef(null);
+
+    useEffect(() => {
+        setNav1(sliderRef1);
+        setNav2(sliderRef2);
+      }, []);
+    
+
     const settings = {
         className: "slick-slider",
         dots: true,
         infinite: true,
-        slidesToShow: 3, // Default number of slides
+        slidesToShow: 1, // Default number of slides
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        responsive: [
+            {
+                breakpoint: 768, // Screen width <= 768px (mobile devices)
+                settings: {
+                    slidesToShow: 1, // Show 1 slide on mobile
+                    slidesToScroll: 1, // Scroll 1 slide at a time
+                    infinite: true,
+                    dots: true,
+                },
+            },
+        ],
+    };
+    const settings2 = {
+        className: "slick-slider",
+        dots: true,
+        infinite: true,
+        slidesToShow: 5, // Default number of slides
         slidesToScroll: 1,
         adaptiveHeight: true,
         autoplay: true,
@@ -130,14 +162,9 @@ export default function ReactSlick() {
     };
     
     
-    return (
+    return (<>
         <div className="slider-container">
-        <Slider {...settings}>
-          {/* <div>
-            <h6 className="slider-card-title">Azure 3D Avatar and ChatGPT Integration</h6>
-            <img src={Arwin} alt="placeholder" />
-            <div className="slider-card-description">This project is a full-stack application built using the MERN stack (MongoDB, Express.js, React, Node.js) to deliver a dynamic, engaging user interaction experience. It integrates Azure's 3D avatar technology for life-like animations, including synchronized voice output and eye movements, and leverages OpenAI's ChatGPT for intelligent conversational responses.</div>
-          </div> */}
+        <Slider {...settings} asNavFor={nav2} ref={slider => (sliderRef1 = slider)}>
             {slides.map((slide, index) => {
                 return (
                 <div key={index} className="slider-card2">
@@ -154,5 +181,24 @@ export default function ReactSlick() {
         </Slider>
       </div>
   
-    );
+  
+    <div className="slider-container">
+    <Slider {...settings2} asNavFor={nav1}
+        ref={slider => (sliderRef2 = slider)}
+        slidesToShow={5}
+        swipeToSlide={true}
+        focusOnSelect={true}>
+   
+        {slides.map((slide, index) => {
+            return (
+            <div key={index} className="slider-card2">
+                <img src={slide.image} alt="placeholder" className="img-card" />
+            </div>
+            );
+        })}
+  
+    </Slider>
+  </div>
+
+  </>);
     }
