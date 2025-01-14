@@ -16,6 +16,7 @@ import Indulge from "../../assets/img/sites/Ingulge.gif";
 import Tikkitt from "../../assets/img/sites/Tikkitt.png";
 import ChatGpt from "../../assets/img/sites/chatgptbanner.webp";
 import AuthNet from "../../assets/img/sites/authorize-net.jpg";
+import HubSpotAPI from "../../assets/img/sites/HubspotApi.webp";
 
 const slides = [
     {
@@ -95,6 +96,12 @@ const slides = [
         description: "Welcome to the MERN Stack Authorize.Net Application! This application serves as an example of how to integrate the Authorize.Net payment gateway into a MERN (MongoDB, Express.js, React, Node.js) stack.",
         image: AuthNet,
         github: "https://github.com/frozzel/auth.net-server"
+    },
+    {
+        title: "Integrating With HubSpot",
+        description: "This repository is for the Integrating With HubSpot I: Foundations course. This practicum is one of two requirements for receiving your Integrating With HubSpot I: Foundations certification. You must also take the exam and receive a passing grade (at least 75%).",
+        image: HubSpotAPI,
+        github: "https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum/tree/main"
     }
 ];
 
