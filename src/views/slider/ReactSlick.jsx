@@ -115,6 +115,7 @@ export default function ReactSlick() {
         slidesToScroll: 1,
         adaptiveHeight: true,
         autoplay: true,
+        autoplaySpeed: 6000,
         responsive: [
             {
                 breakpoint: 768, // Screen width <= 768px (mobile devices)
