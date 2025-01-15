@@ -169,10 +169,14 @@ export default function ReactSlick() {
                 return (
                 <div key={index} className="slider-card2">
                     <a href={slide.github} target='_blank' rel="noreferrer">
-                    <h6 className="slider-card-title">{slide.title}</h6>
+                    
                     <img src={slide.image} alt="placeholder" className="img-card" />
+                    <div className="slider-description-overlay">
+
+                    <h6 className="slider-card-title">{slide.title}</h6>
                     <div className="slider-card-description">{slide.description}</div>
                     {slide.description2 ? <div className="slider-card-description">{slide.description2}</div> : null}
+                    </div>
                     </a>
                 </div>
                 );
@@ -182,7 +186,7 @@ export default function ReactSlick() {
       </div>
   
   
-    <div className="slider-container">
+    <div className="slider-container slider-container-secondary">
     <Slider {...settings2} asNavFor={nav1}
         ref={slider => (sliderRef2 = slider)}
         slidesToShow={5}
