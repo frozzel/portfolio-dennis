@@ -35,22 +35,26 @@
 
 .slider-card-title{
     color: whitesmoke;
-    font-weight: 500;
+    font-weight: bold;
     margin-top: 10px;
+    font-size: 1.5rem;
 }
 
 .slider-card-description{
-    opacity: 0.7;
+    /* opacity: 0.7; */
     color: whitesmoke;
-    font-size: 13px;  
-    text-align: justify;
-    text-indent: 2rem;
+    font-size: 1rem;  
+    text-align: left;
+    /* text-indent: 2rem; */
+    font-weight: 400;
+
     
 }
 
 .slider-card-image{
-    width: 100%;
-    height: 100%;
+    width: auto;
+    /* height: 100%; */
+    max-height: 30%;
     background-color: rgb(240 240 240 / 80%);
     /* border-top-left-radius: 10px;
     border-top-right-radius: 10px; */
@@ -108,6 +112,7 @@ img, .img-card{
     object-fit: cover;
     border-radius: 10px;
     /* border-top-right-radius: 10px; */
+    display: block;
     
 }
 .slick-slider{
@@ -116,15 +121,53 @@ img, .img-card{
 }
 .slider-card2 {
     padding: .3rem;
+    position: relative;
+    overflow: hidden; /* Ensures the overlay stays within the bounds */
 
 }
-/* .icon2{
-   
-    background: -moz-linear-gradient(top, #51bcda 0%, #ff6cab 100%);
-    background: -webkit-linear-gradient(top, #51bcda 0%, #ff6cab 100%);
-    background: linear-gradient(to bottom, #51bcda 0%, #ff6cab 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
+@media (max-width: 768px) {
+    .slider-container-secondary {
+        display: none;
+    
+    }
+}
+.slider-description-overlay {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the image */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent background */
+    color: #fff; /* White text for contrast */
+    /* padding: 10px 15px; */
+    text-align: left; /* Align text to the left */
+    border-radius:  10px;
+    overflow: hidden; /* Ensures the text is not longer than the container */
+}
+
+/* Adjust the layout for mobile screens */
+@media (max-width: 768px) {
+    .slider-description-overlay {
+        position: static; /* Remove absolute positioning */
+        background: none; /* Remove the background */
+        color: #000; /* Use black text for better readability */
+        padding: 10px 0; /* Adjust spacing */
+    }
+
+    .slider-card2 {
+        margin-bottom: 15px; /* Add spacing between slides */
+    }
+
+    .img-card {
+        margin-bottom: 10px; /* Space between the image and description */
+    }
+    .slider-card-title{
+        font-size: .7rem;
+        text-align: center;
+    }
+    .slider-card-description{
+        font-size: 0.6rem;
+        text-indent: 2rem;
+        text-align: justify;
+
+    }
+}

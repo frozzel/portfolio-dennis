@@ -227,7 +227,7 @@ function Home() {
           backgroundImage:"url(" + require("assets/img/bg.jpg") + ")", backgroundPosition: "bottom"}}
         >
           <Container>
-            <h2 className="title">Work Portfolio</h2>
+            {/* <h2 className="title">Work Portfolio</h2> */}
 
             <ReactSlick />
                     {/* <ReactCardSlider slides={slides}/> */}
