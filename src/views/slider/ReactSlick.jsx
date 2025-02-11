@@ -17,6 +17,7 @@ import Tikkitt from "../../assets/img/sites/Tikkitt.png";
 import ChatGpt from "../../assets/img/sites/chatgptbanner.webp";
 import AuthNet from "../../assets/img/sites/authorize-net.jpg";
 import HubSpotAPI from "../../assets/img/sites/HubspotApi.webp";
+import Cozy from "../../assets/img/sites/Cozy.png";
 
 const slides = [
     {
@@ -102,6 +103,12 @@ const slides = [
         description: "This repository is for the Integrating With HubSpot I: Foundations course. This practicum is one of two requirements for receiving your Integrating With HubSpot I: Foundations certification. You must also take the exam and receive a passing grade (at least 75%).",
         image: HubSpotAPI,
         github: "https://github.com/frozzel/Dennis-Hickox-iwh-i-practicum/tree/main"
+    },
+    {
+        title: "Cozy Throwie",
+        description: "Cozy Throwie is a modern, AI-powered blogging platform built on the MERN (MongoDB, Express, React, Node.js) stack. It automates blog creation and social media posts using ChatGPT for text generation and DALL·E 3 for image generation, making content creation seamless and efficient.",
+        image: Cozy,
+        github: "https://github.com/frozzel/cozythrowie"
     }
 ];
 
